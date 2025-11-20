@@ -45,15 +45,15 @@
             gap: 0.5rem;
         }
 
-        .logo-image {
-            height: 50px;
+        .logo img {
+            height: 70px;
             width: auto;
-            /* Placeholder for your logo */
-            background: #E89B9B;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: bold;
-            color: white;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .nav-right {
@@ -361,7 +361,7 @@
 
         .services-secondary {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
 
@@ -735,7 +735,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="Pyhn Logo" style="height: 50px; width: auto;">
+                <img src="logo.png" alt="Pyhn - Prioritize Your Health Now">
             </div>
             <div class="nav-right">
                 <ul>
@@ -951,6 +951,13 @@
                     <h4 lang="de">Vorträge & Keynotes</h4>
                     <p lang="en">Inspiring talks on health and longevity</p>
                     <p lang="de">Inspirierende Vorträge über Gesundheit</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h4 lang="en">AI Longevity Agent</h4>
+                    <h4 lang="de">KI Langlebigkeits-Agent</h4>
+                    <p lang="en">Personalized AI assistant for your longevity journey - available 24/7</p>
+                    <p lang="de">Personalisierter KI-Assistent für Ihre Langlebigkeitsreise - 24/7 verfügbar</p>
                 </div>
             </div>
         </div>
