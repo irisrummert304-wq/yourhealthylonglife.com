@@ -162,7 +162,8 @@
 
         .section-intro {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
             color: #666;
             max-width: 800px;
             margin: 0 auto 3rem;
@@ -391,7 +392,7 @@
             grid-template-columns: 200px 1fr 1fr 1fr 200px;
             gap: 2rem;
             margin-top: 3rem;
-            align-items: center;
+            align-items: stretch;
         }
 
         .process-photo {
@@ -413,10 +414,10 @@
             padding: 2rem;
             background: white;
             border-radius: 15px;
-            min-height: 280px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            height: 100%;
         }
 
         .step-number {
@@ -593,7 +594,6 @@
             margin-top: 4rem;
         }
 
-        /* FIXED LANGUAGE SWITCHER CSS */
         .lang-en { display: block; }
         .lang-de { display: none; }
         
@@ -614,7 +614,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .dimensions,
             .cred-grid {
                 grid-template-columns: 1fr;
             }
@@ -1000,7 +999,7 @@
                 </ul>
                 <div class="contact-detail">
                     <span class="contact-icon">📧</span>
-                    <p><a href="mailto:info@yourhealthylonglife.com">info@yourhealthylonglife.com</a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#5930373f361920362c2b313c38352d31203536373e35303f3c773a3634"><span class="__cf_email__" data-cfemail="4a23242c250a33253f38222f2b263e22332625242d26232c2f64292527">[email&#160;protected]</span></a></p>
                 </div>
             </div>
         </div>
@@ -1012,7 +1011,7 @@
         <p style="margin-top: 1rem; font-size: 0.9rem;">Prioritize Your Health Now</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function switchLanguage(lang) {
             document.documentElement.setAttribute('lang', lang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1022,4 +1021,8 @@
             localStorage.setItem('preferredLanguage', lang);
         }
 
-        window.addEventListener('DOMContentLoade
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            document.documentElement.setAttribute('lang', savedLang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+        
