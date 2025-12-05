@@ -214,7 +214,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 20%;
+            object-position: center 30%;
             border-radius: 15px;
         }
 
@@ -227,49 +227,6 @@
         .about-text p {
             margin-bottom: 1rem;
             line-height: 1.8;
-        }
-
-        .dimensions {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .dimension-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-
-        .dimension-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .dimension-card h3 {
-            color: #E89B9B;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        .dimension-card p {
-            text-align: center;
-        }
-
-        .dimension-icon {
-            font-size: 2.5rem;
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #E89B9B, #D88A8A);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
         }
 
         .pillars {
@@ -456,6 +413,10 @@
             padding: 2rem;
             background: white;
             border-radius: 15px;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         .step-number {
@@ -476,6 +437,12 @@
             color: #4A5C6A;
             font-size: 1.3rem;
             margin-bottom: 1rem;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
         }
 
         .credentials {
@@ -726,15 +693,8 @@
 
     <section id="about">
         <div class="lang-en">
-            <h2>My Journey to Health Coaching</h2>
-            <p class="section-intro">From pharmaceutical strategy to personal transformation</p>
-            
-            <div class="personal-story">
-                <div class="story-content">
-                    <p>After a stressful period focused solely on career and family, several health crises - with myself but mostly within my close circle - as well as a sudden move to another continent, prompted me to pause and listen to my inner needs. I realized I didn't want to just feel 'okay' or 'not that tired' anymore. I wanted to feel truly energized, well-rested, and in top shape - for myself and my family.</p>
-                    <p>Now, through Health Coaching, I want to help you do the same. You don't have to just function - you deserve to thrive. After years developing strategies in the pharmaceutical industry, I now help you create your own health strategy. Together, we'll proactively set your goals and steer your health journey before illness dictates the path.</p>
-                </div>
-            </div>
+            <h2>About</h2>
+            <p class="section-intro">Strategic thinking meets holistic health expertise</p>
 
             <div class="about-content">
                 <div class="about-image">
@@ -743,22 +703,22 @@
                 <div class="about-text">
                     <h3>A Holistic Approach Rooted in Strategy</h3>
                     <p>Your doctor says your results look okay and your lab values are 'within normal range.' But you sense something's not quite right - or simply not optimal. I help you bridge that gap from 'not sick' to truly thriving. My strategic approach optimizes your health proactively rather than reactively, helping you stay ahead of health issues before they become diagnoses.</p>
-                    <p>As a certified Integrative Nutrition Health Coach with additional qualifications as a Personal Trainer and Nutritionist, I address all dimensions of health - physical, mental, emotional, and spiritual.</p>
+                    <p>As a certified Integrative Nutrition Health Coach with additional qualifications as a Personal Trainer and Nutritionist, I address all four dimensions of health: <strong>Mental</strong> (clarity, focus & strength), <strong>Physical</strong> (movement, nutrition & vitality), <strong>Spiritual</strong> (purpose, values & inner balance), and <strong>Emotional</strong> (intelligence & resilience).</p>
                     <p><strong>My Mission:</strong> To empower busy professionals and parents to proactively take control of their health, moving from "just okay" to truly thriving - with energy, clarity, and vitality.</p>
+                </div>
+            </div>
+            
+            <div class="personal-story">
+                <div class="story-content">
+                    <p>After a stressful period focused solely on career and family, several health crises - with myself but mostly within my close circle - as well as a sudden move to another continent, prompted me to pause and listen to my inner needs. I realized I didn't want to just feel 'okay' or 'not that tired' anymore. I wanted to feel truly energized, well-rested, and in top shape - for myself and my family.</p>
+                    <p>Now, through Health Coaching, I want to help you do the same. You don't have to just function - you deserve to thrive. After years developing strategies in the pharmaceutical industry, I now help you create your own health strategy. Together, we'll proactively set your goals and steer your health journey before illness dictates the path.</p>
                 </div>
             </div>
         </div>
 
         <div class="lang-de">
-            <h2>Mein Weg zum Health Coaching</h2>
-            <p class="section-intro">Von Pharma-Strategie zur persönlichen Transformation</p>
-            
-            <div class="personal-story">
-                <div class="story-content">
-                    <p>Nach einer stressigen Zeit, die sich ausschließlich um die Karriere parallel zur Familie mit 3 kleinen Kindern drehte, haben einige gesundheitliche Krisen - bei mir selbst, aber vor allem in meinem engsten Umfeld - sowie ein plötzlicher Umzug auf einen anderen Kontinent mich dazu gebracht, auf meine eigenen Bedürfnisse zu hören. Ich stellte fest, dass ich mich nicht nur 'ganz okay' fühlen wollte. Ich wollte mich wirklich energiegeladen, ausgeruht und topfit fühlen - für mich selbst und meine Familie.</p>
-                    <p>Mit meinem Health Coaching Programm möchte ich dir helfen, dasselbe zu tun. Nicht nur zu funktionieren, sondern dich rund um wohl und fit zu fühlen. Nach Jahren der Strategieentwicklung in der Pharmaindustrie helfe ich dir jetzt, deine Strategie zu einem fitteren, langen Leben zu entwickeln. Gemeinsam setzen wir proaktiv deine Ziele und steuern deine Reise, bevor Krankheiten den Weg diktieren.</p>
-                </div>
-            </div>
+            <h2>Über mich</h2>
+            <p class="section-intro">Strategisches Denken trifft ganzheitliche Gesundheitsexpertise</p>
             
             <div class="about-content">
                 <div class="about-image">
@@ -767,40 +727,16 @@
                 <div class="about-text">
                     <h3>Ein ganzheitlicher Ansatz mit strategischem Fundament</h3>
                     <p>Dein Arzt sagt, deine Werte sehen eigentlich gut aus und deine Laborwerte sind "im Normbereich". Aber du spürst, dass etwas nicht ganz stimmt - oder einfach nicht optimal ist. Ich helfe dir, deinen eigenen Weg zu finden, diese Lücke zwischen "nicht krank" und "wirklich fit" zu überbrücken. Mein strategischer Ansatz optimiert deine Gesundheit proaktiv statt reaktiv und hilft dir, gesundheitlichen Problemen voraus zu sein, bevor sie zu Diagnosen werden.</p>
-                    <p>Als zertifizierter "Integrative Nutrition Health Coach" mit zusätzlichen Qualifikationen als Personal Trainer und Ernährungsberater adressiere ich alle Dimensionen der Gesundheit - physisch, mental, emotional und spirituell. Zusammen fokussieren wir uns auf die Themen, die für dich relevant sind und wie du mit kleinen Schritten einen großen Mehrwert generieren kannst.</p>
+                    <p>Als zertifizierter "Integrative Nutrition Health Coach" mit zusätzlichen Qualifikationen als Personal Trainer und Ernährungsberater adressiere ich alle vier Dimensionen der Gesundheit: <strong>Mental</strong> (Klarheit, Fokus & Stärke), <strong>Physisch</strong> (Bewegung, Ernährung & Vitalität), <strong>Spirituell</strong> (Sinn, Werte & Balance), und <strong>Emotional</strong> (Intelligenz & Resilienz). Zusammen fokussieren wir uns auf die Themen, die für dich relevant sind und wie du mit kleinen Schritten einen großen Mehrwert generieren kannst.</p>
                     <p><strong>Meine Mission:</strong> Vielbeschäftigten Berufstätigen und Eltern zu helfen, proaktiv die Kontrolle über ihre Gesundheit zu übernehmen und sich von "ganz okay" zu wirklich erfüllt zu entwickeln - mit Energie, Klarheit und Vitalität.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="dimensions">
-            <div class="dimension-card">
-                <div class="dimension-icon">🧠</div>
-                <h3 class="lang-en">Mental</h3>
-                <h3 class="lang-de">Mental</h3>
-                <p class="lang-en">Clarity, focus, and mental strength for your daily life</p>
-                <p class="lang-de">Klarheit, Fokus und mentale Stärke für deinen Alltag</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">💪</div>
-                <h3 class="lang-en">Physical</h3>
-                <h3 class="lang-de">Physisch</h3>
-                <p class="lang-en">Movement, nutrition, and physical vitality</p>
-                <p class="lang-de">Bewegung, Ernährung, Erholung und körperliche Vitalität</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">✨</div>
-                <h3 class="lang-en">Spiritual</h3>
-                <h3 class="lang-de">Spirituell</h3>
-                <p class="lang-en">Purpose, values, and inner balance</p>
-                <p class="lang-de">Sinn, Werte und innere Balance</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">❤️</div>
-                <h3 class="lang-en">Emotional</h3>
-                <h3 class="lang-de">Emotional</h3>
-                <p class="lang-en">Emotional intelligence and resilience</p>
-                <p class="lang-de">Emotionale Intelligenz und Resilienz</p>
+            
+            <div class="personal-story">
+                <div class="story-content">
+                    <p>Nach einer stressigen Zeit, die sich ausschließlich um die Karriere parallel zur Familie mit 3 kleinen Kindern drehte, haben einige gesundheitliche Krisen - bei mir selbst, aber vor allem in meinem engsten Umfeld - sowie ein plötzlicher Umzug auf einen anderen Kontinent mich dazu gebracht, auf meine eigenen Bedürfnisse zu hören. Ich stellte fest, dass ich mich nicht nur 'ganz okay' fühlen wollte. Ich wollte mich wirklich energiegeladen, ausgeruht und topfit fühlen - für mich selbst und meine Familie.</p>
+                    <p>Mit meinem Health Coaching Programm möchte ich dir helfen, dasselbe zu tun. Nicht nur zu funktionieren, sondern dich rund um wohl und fit zu fühlen. Nach Jahren der Strategieentwicklung in der Pharmaindustrie helfe ich dir jetzt, deine Strategie zu einem fitteren, langen Leben zu entwickeln. Gemeinsam setzen wir proaktiv deine Ziele und steuern deine Reise, bevor Krankheiten den Weg diktieren.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1064,7 +1000,7 @@
                 </ul>
                 <div class="contact-detail">
                     <span class="contact-icon">📧</span>
-                    <p><a href="/cdn-cgi/l/email-protection#87eee9e1e8c7fee8f2f5efe2e6ebf3effeebe8e9e0ebeee1e2a9e4e8ea"><span class="__cf_email__" data-cfemail="8fe6e1e9e0cff6e0fafde7eaeee3fbe7f6e3e0e1e8e3e6e9eaa1ece0e2">[email&#160;protected]</span></a></p>
+                    <p><a href="mailto:info@yourhealthylonglife.com">info@yourhealthylonglife.com</a></p>
                 </div>
             </div>
         </div>
@@ -1076,7 +1012,7 @@
         <p style="margin-top: 1rem; font-size: 0.9rem;">Prioritize Your Health Now</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function switchLanguage(lang) {
             document.documentElement.setAttribute('lang', lang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
