@@ -310,6 +310,7 @@
             height: 200%;
             background: radial-gradient(circle, rgba(232, 155, 155, 0.1) 0%, transparent 70%);
             animation: pulse 4s ease-in-out infinite;
+            z-index: 0;
         }
 
         @keyframes pulse {
@@ -354,6 +355,11 @@
             margin-bottom: 2rem;
             position: relative;
             z-index: 1;
+        }
+        
+        .service-featured .cta-button {
+            position: relative;
+            z-index: 2;
         }
 
         .additional-services {
@@ -418,14 +424,14 @@
 
         .process-steps {
             display: grid;
-            grid-template-columns: 200px 1fr 1fr 1fr 200px;
+            grid-template-columns: 280px 1fr 1fr 1fr 280px;
             gap: 2rem;
             margin-top: 3rem;
             align-items: stretch;
         }
 
         .process-photo {
-            width: 200px;
+            width: 280px;
             height: 420px;
             border-radius: 15px;
             overflow: hidden;
@@ -1068,7 +1074,7 @@
                 </ul>
                 <div class="contact-detail">
                     <span class="contact-icon">📧</span>
-                    <p><a href="/cdn-cgi/l/email-protection#9ef7f0f8f1dee7f1ebecf6fbfff2eaf6e7f2f1f0f9f2f7f8fbb0fdf1f3"><span class="__cf_email__" data-cfemail="2d44434b426d5442585f45484c415945544142434a41444b48034e4240">[email&#160;protected]</span></a></p>
+                    <p><a href="mailto:info@yourhealthylonglife.com">info@yourhealthylonglife.com</a></p>
                 </div>
             </div>
         </div>
@@ -1081,7 +1087,7 @@
     </footer>
 
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function switchLanguage(lang) {
             document.documentElement.setAttribute('lang', lang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
