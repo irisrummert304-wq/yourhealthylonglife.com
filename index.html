@@ -106,7 +106,7 @@
 
         .hero {
             margin-top: 70px;
-            background: linear-gradient(135deg, rgba(74, 92, 106, 0.85), rgba(107, 124, 138, 0.85)), url('plank.jpg');
+            background: linear-gradient(135deg, rgba(74, 92, 106, 0.6), rgba(107, 124, 138, 0.6)), url('plank.jpg');
             color: white;
             padding: 8rem 2rem 6rem;
             text-align: center;
@@ -426,7 +426,7 @@
 
         .process-photo {
             width: 200px;
-            height: 300px;
+            height: 420px;
             border-radius: 15px;
             overflow: hidden;
             background: linear-gradient(135deg, #E89B9B, #D88A8A);
@@ -492,6 +492,13 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .cred-grid-health {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
@@ -631,6 +638,11 @@
         html[lang="de"] .lang-de { display: block; }
 
         @media (max-width: 768px) {
+            .hero {
+                background-position: center 35%;
+                padding: 4rem 1.5rem 3rem;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -643,15 +655,32 @@
             .contact-content {
                 grid-template-columns: 1fr;
             }
+            
+            .about-image {
+                height: 350px;
+            }
+            
+            .about-image img {
+                object-position: center 40%;
+                transform: scale(1.15);
+            }
 
             .dimensions,
             .cred-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cred-grid-health {
                 grid-template-columns: 1fr;
             }
 
             .pillars-grid,
             .services-secondary {
                 grid-template-columns: 1fr;
+            }
+            
+            .service-featured h3 {
+                text-align: center;
             }
 
             .process-steps {
@@ -922,7 +951,7 @@
         <p class="section-intro lang-en" style="color: white;">Strategic thinking meets holistic health expertise</p>
         <p class="section-intro lang-de" style="color: white;">Strategisches Denken trifft ganzheitliche Gesundheitsexpertise</p>
         
-        <div class="cred-grid">
+        <div class="cred-grid-health">
             <div class="cred-item">
                 <div class="cred-icon-text">IIN</div>
                 <h3 class="lang-en">Integrative Nutrition Health Coach</h3>
@@ -943,6 +972,13 @@
                 <p class="lang-en">Certified German Institution</p>
                 <p class="lang-de">Zertifizierte deutsche Institution</p>
             </div>
+            <div class="cred-item">
+                <div class="cred-icon-text">CHC</div>
+                <h3 class="lang-en">Certified Health Coach</h3>
+                <h3 class="lang-de">Certified Health Coach</h3>
+                <p class="lang-en">Academy of Sports</p>
+                <p class="lang-de">Academy of Sports</p>
+            </div>
         </div>
 
         <div style="margin-top: 4rem; padding-top: 3rem; border-top: 2px solid rgba(232, 155, 155, 0.3);">
@@ -952,8 +988,9 @@
                 <div class="cred-item">
                     <div class="cred-icon-text">B.Sc.</div>
                     <h3>Bachelor of Business Administration</h3>
-                    <p class="lang-en">Foundation in strategic thinking</p>
-                    <p class="lang-de">Fundament in strategischem Denken</p>
+                    <p class="lang-en">Foundation in strategic thinking and corporate development</p>
+                    <p class="lang-de">Fundament in strategischem Denken und Corporate Development</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">University of Cologne<br>University of British Columbia</p>
                 </div>
                 <div class="cred-item">
                     <div class="cred-icon-text">M.Sc.</div>
@@ -961,6 +998,7 @@
                     <h3 class="lang-de">Master in Business Administration<br>& Master in International Management</h3>
                     <p class="lang-en">Dual master's degrees in strategic expertise</p>
                     <p class="lang-de">Zwei Master-Abschlüsse in strategischer Expertise</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">University of Cologne<br>Bocconi University</p>
                 </div>
                 <div class="cred-item">
                     <div class="cred-icon-text">360°</div>
@@ -1030,7 +1068,7 @@
                 </ul>
                 <div class="contact-detail">
                     <span class="contact-icon">📧</span>
-                    <p><a href="mailto:info@yourhealthylonglife.com">info@yourhealthylonglife.com</a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#9ef7f0f8f1dee7f1ebecf6fbfff2eaf6e7f2f1f0f9f2f7f8fbb0fdf1f3"><span class="__cf_email__" data-cfemail="2d44434b426d5442585f45484c415945544142434a41444b48034e4240">[email&#160;protected]</span></a></p>
                 </div>
             </div>
         </div>
@@ -1043,7 +1081,7 @@
     </footer>
 
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function switchLanguage(lang) {
             document.documentElement.setAttribute('lang', lang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1057,7 +1095,7 @@
             const savedLang = localStorage.getItem('preferredLanguage') || 'en';
             document.documentElement.setAttribute('lang', savedLang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.textContent.toLowerCase() === savedLang) {
+                        if (btn.textContent.toLowerCase() === savedLang) {
                     btn.classList.add('active');
                 } else {
                     btn.classList.remove('active');
