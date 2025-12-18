@@ -628,70 +628,15 @@
             border: 2px solid rgba(232, 155, 155, 0.3);
         }
 
-        /* Certificate Link in Credentials */
-        .cert-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            margin-top: 0.8rem;
-            padding: 0.4rem 0.8rem;
-            background: rgba(232, 155, 155, 0.15);
-            border: 1px solid #E89B9B;
-            border-radius: 20px;
-            color: #E89B9B;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .cert-link:hover {
-            background: #E89B9B;
-            color: white;
-        }
-
-        .cert-link svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* Certificate Thumbnail in Credentials */
+        .cert-thumb {
             width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 3rem;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .lightbox-close:hover {
-            color: #E89B9B;
+            max-width: 180px;
+            height: auto;
+            margin-top: 1rem;
+            border-radius: 8px;
+            border: 2px solid rgba(232, 155, 155, 0.3);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
         footer {
@@ -1030,34 +975,22 @@
                 <h3 class="lang-de">Integrative Nutrition Health Coach</h3>
                 <p class="lang-en">Institute of Integrative Nutrition</p>
                 <p class="lang-de">Institute of Integrative Nutrition</p>
-                <span class="cert-link" onclick="openLightbox('cert-iin.png')">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <span class="lang-en">View Certificate</span>
-                    <span class="lang-de">Zertifikat</span>
-                </span>
+                <img src="cert-iin.png" alt="IIN Certificate" class="cert-thumb">
             </div>
             <div class="cred-item">
                 <div class="cred-icon-text">PT</div>
                 <h3>Personal Trainer</h3>
                 <p class="lang-en">Academy of Sports</p>
                 <p class="lang-de">Academy of Sports</p>
-                <span class="cert-link" onclick="openLightbox('cert-fitness.png')">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <span class="lang-en">View Certificate</span>
-                    <span class="lang-de">Zertifikat</span>
-                </span>
+                <img src="cert-fitness.png" alt="Fitness Certificate" class="cert-thumb">
             </div>
             <div class="cred-item">
                 <div class="cred-icon-text">EN</div>
                 <h3 class="lang-en">Nutritionist</h3>
                 <h3 class="lang-de">Ernährungsberater</h3>
-                <p class="lang-en">Academy of Sports (Grade 1.0)</p>
-                <p class="lang-de">Academy of Sports (Note 1,0)</p>
-                <span class="cert-link" onclick="openLightbox('cert-nutrition.png')">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <span class="lang-en">View Certificate</span>
-                    <span class="lang-de">Zertifikat</span>
-                </span>
+                <p class="lang-en">Academy of Sports</p>
+                <p class="lang-de">Academy of Sports</p>
+                <img src="cert-nutrition.png" alt="Nutrition Certificate" class="cert-thumb">
             </div>
             <div class="cred-item">
                 <div class="cred-icon-text">CHC</div>
@@ -1104,13 +1037,7 @@
         </div>
     </div>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Certificate">
-    </div>
-
-    <section id="contact">
+<section id="contact">
         <h2 class="lang-en">Ready for Change?</h2>
         <h2 class="lang-de">Bereit für Veränderung?</h2>
         <p class="section-intro lang-en">Let's make your health a priority together</p>
@@ -1175,23 +1102,6 @@
 
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Lightbox functions
-        function openLightbox(imgSrc) {
-            document.getElementById('lightbox-img').src = imgSrc;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeLightbox();
-        });
-
         function switchLanguage(lang) {
             document.documentElement.setAttribute('lang', lang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
