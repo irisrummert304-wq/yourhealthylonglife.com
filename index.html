@@ -628,6 +628,64 @@
             border: 2px solid rgba(232, 155, 155, 0.3);
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+            padding: 5rem 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #F5F1ED;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #E89B9B;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #E89B9B;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            line-height: 1.8;
+            color: #4A5C6A;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #4A5C6A;
+        }
+
+        .testimonial-location {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Certificate Thumbnail in Credentials */
         .cert-thumb {
             width: 100%;
@@ -958,6 +1016,46 @@
             </div>
             <div class="process-photo">
                 <img src="process-right.jpg" alt="Transformation">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="lang-en">What Clients Say</h2>
+        <h2 class="lang-de">Was Klienten sagen</h2>
+        <p class="section-intro lang-en">Real transformations, real people</p>
+        <p class="section-intro lang-de">Echte Transformationen, echte Menschen</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text lang-en">"The health coaching program helped me understand the importance of proper nutrition and strength training — not just for muscle gain, but mainly for overall fitness. Over time, my long-standing joint and back pain significantly improved."</p>
+                <p class="testimonial-text lang-de">"Das Gesundheitscoaching half mir, die Bedeutung von richtiger Ernährung und Krafttraining zu verstehen — nicht nur für Muskelaufbau, sondern vor allem für die allgemeine Fitness. Mit der Zeit verbesserten sich meine langjährigen Gelenk- und Rückenschmerzen deutlich."</p>
+                <p class="testimonial-author">Maxim</p>
+                <p class="testimonial-location lang-en">Germany</p>
+                <p class="testimonial-location lang-de">Deutschland</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text lang-en">"Through the program, I was able to identify poor sleep and stress management as the root causes of not feeling at my best — emotionally, mentally, and physically. With guidance, I gradually implemented changes that helped me relax and sleep much better. I now feel far more active and have so much more energy."</p>
+                <p class="testimonial-text lang-de">"Durch das Programm konnte ich schlechten Schlaf und Stressmanagement als Ursachen dafür identifizieren, dass ich mich nicht optimal fühlte — emotional, mental und körperlich. Mit Anleitung setzte ich schrittweise Veränderungen um, die mir halfen, besser zu entspannen und zu schlafen. Ich fühle mich jetzt viel aktiver und habe so viel mehr Energie."</p>
+                <p class="testimonial-author">Chelsea</p>
+                <p class="testimonial-location">Chicago</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text lang-en">"Through the health coaching program, I realized that unresolved emotional issues were holding me back from making meaningful and sustainable changes. Since then, my transformation has begun. Integrating intermittent fasting into my daily routine, for example, helped me maintain my weight goals while still ensuring proper nutrient intake."</p>
+                <p class="testimonial-text lang-de">"Durch das Gesundheitscoaching erkannte ich, dass ungelöste emotionale Themen mich davon abhielten, bedeutsame und nachhaltige Veränderungen zu machen. Seitdem hat meine Transformation begonnen. Intermittierendes Fasten in meinen Alltag zu integrieren half mir zum Beispiel, meine Gewichtsziele zu halten und gleichzeitig eine ausreichende Nährstoffzufuhr sicherzustellen."</p>
+                <p class="testimonial-author">Linh</p>
+                <p class="testimonial-location">Saigon</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text lang-en">"She truly supported me as an accountability partner. Even though it required overcoming long-held beliefs, I was able to rethink my eating and snacking habits and improve my breakfast routine. And this was just the beginning."</p>
+                <p class="testimonial-text lang-de">"Sie hat mich wirklich als Accountability-Partner unterstützt. Obwohl es erforderte, langjährige Überzeugungen zu überwinden, konnte ich meine Ess- und Snack-Gewohnheiten überdenken und meine Frühstücksroutine verbessern. Und das war erst der Anfang."</p>
+                <p class="testimonial-author">Inge</p>
+                <p class="testimonial-location lang-en">Germany</p>
+                <p class="testimonial-location lang-de">Deutschland</p>
             </div>
         </div>
     </section>
