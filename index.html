@@ -712,6 +712,12 @@
         html[lang="de"] .lang-en { display: none; }
         html[lang="de"] .lang-de { display: block; }
 
+        /* Inline elements need inline display */
+        a.lang-en, span.lang-en { display: inline; }
+        a.lang-de, span.lang-de { display: none; }
+        html[lang="de"] a.lang-en, html[lang="de"] span.lang-en { display: none; }
+        html[lang="de"] a.lang-de, html[lang="de"] span.lang-de { display: inline; }
+
         @media (max-width: 768px) {
             .hero {
                 background-position: center 35%;
@@ -1213,4 +1219,13 @@
             const savedLang = localStorage.getItem('preferredLanguage') || 'en';
             document.documentElement.setAttribute('lang', savedLang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                
+                if (btn.textContent.toLowerCase() === savedLang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
