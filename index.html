@@ -1,1251 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PYHN – Prioritize Your Health Now | Health Coaching & Longevity</title>
-
-    <!-- SEO: English -->
-    <meta name="description" content="PYHN (Prioritize Your Health Now) offers evidence-based health coaching for busy professionals who want to build sustainable habits for long-term health, wellbeing and longevity.">
-
-    <!-- SEO: German -->
-    <meta name="description:de" content="Online Coaching für Abnehmen, Ernährung & fit werden – für Berufstätige aus Köln, Duisburg und ganz Deutschland, die früh aufstehen oder Schicht schieben. Gesünder leben zu Zeiten, die zu deinem Leben passen.">
-    <meta name="title:de" content="Online Health Coach für Frühaufsteher &amp; Schichtarbeiter | Your Healthy Long Life">
-
-    <!-- hreflang: tells Google this page exists in both languages -->
-    <link rel="alternate" hreflang="de" href="https://yourhealthylonglife.com/?lang=de">
-    <link rel="alternate" hreflang="en" href="https://yourhealthylonglife.com/">
-    <link rel="alternate" hreflang="x-default" href="https://yourhealthylonglife.com/">
-
-    <!-- Open Graph (link previews in WhatsApp, LinkedIn etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourhealthylonglife.com/">
-    <meta property="og:title" content="Online Health Coach für Frühaufsteher &amp; Schichtarbeiter | Your Healthy Long Life">
-    <meta property="og:description" content="Online Coaching für Abnehmen, Ernährung &amp; fit werden – für Berufstätige aus Köln, Duisburg und ganz Deutschland, die früh aufstehen oder Schicht schieben. Gesünder leben zu Zeiten, die zu deinem Leben passen.">
-    <meta property="og:image" content="https://yourhealthylonglife.com/profile.jpg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #F5F1ED;
-        }
-
-        header {
-            background: linear-gradient(135deg, #4A5C6A 0%, #6B7C8A 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo img {
-            height: 70px;
-            width: auto;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #E89B9B;
-        }
-
-        .language-switcher {
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-        }
-
-        .lang-btn {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-
-        .lang-btn:hover {
-            background: #E89B9B;
-            border-color: #E89B9B;
-        }
-
-        .lang-btn.active {
-            background: #E89B9B;
-            border-color: #E89B9B;
-        }
-
-        .hero {
-            margin-top: 70px;
-            background: linear-gradient(135deg, rgba(74, 92, 106, 0.6), rgba(107, 124, 138, 0.6)), url('plank.jpg');
-            color: white;
-            padding: 8rem 2rem 6rem;
-            text-align: center;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #E89B9B;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #E89B9B;
-            color: white;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(232, 155, 155, 0.3);
-        }
-
-        .cta-button:hover {
-            background-color: #D88A8A;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 155, 155, 0.4);
-        }
-
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #4A5C6A;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .section-intro {
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .personal-story {
-            background: linear-gradient(135deg, rgba(232, 155, 155, 0.08), rgba(232, 155, 155, 0.03));
-            border-left: 4px solid #E89B9B;
-            padding: 3rem;
-            margin: 3rem auto;
-            max-width: 900px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .story-content {
-            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: #4A5C6A;
-            font-style: italic;
-            letter-spacing: 0.3px;
-        }
-
-        .story-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .story-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #E89B9B, #D88A8A);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 30%;
-            border-radius: 15px;
-        }
-
-        .about-text h3 {
-            color: #E89B9B;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .pillars {
-            background: white;
-            padding: 5rem 2rem;
-            margin-top: 3rem;
-            border-radius: 20px;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .pillar {
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-
-        .pillar-icon {
-            font-size: 3rem;
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 1.5rem;
-            background: transparent;
-            border: 3px solid #E89B9B;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .pillar-icon::before {
-            content: '';
-            width: 40px;
-            height: 40px;
-            border: 3px solid #E89B9B;
-            border-radius: 50%;
-        }
-
-        .pillar:hover .pillar-icon {
-            transform: translateY(-5px);
-            border-color: #D88A8A;
-            border-width: 4px;
-        }
-        
-        .pillar:hover .pillar-icon::before {
-            border-color: #D88A8A;
-            border-width: 4px;
-        }
-
-        .pillar h3 {
-            color: #4A5C6A;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-featured {
-            background: linear-gradient(135deg, #4A5C6A, #6B7C8A);
-            color: white;
-            padding: 4rem 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(74, 92, 106, 0.3);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 3rem;
-        }
-
-        .service-featured::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(232, 155, 155, 0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 1.5rem;
-            background: transparent;
-            border: 3px solid #E89B9B;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .service-icon::before {
-            content: '';
-            width: 45px;
-            height: 45px;
-            border: 3px solid #E89B9B;
-            border-radius: 50%;
-        }
-
-        .service-featured h3 {
-            color: #E89B9B;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-featured p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .service-featured .cta-button {
-            position: relative;
-            z-index: 2;
-        }
-
-        .additional-services {
-            margin-top: 3rem;
-        }
-
-        .additional-services h3 {
-            text-align: center;
-            color: #4A5C6A;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-weight: normal;
-        }
-
-        .services-secondary {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-            text-align: center;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(232, 155, 155, 0.15);
-            border-color: #E89B9B;
-        }
-
-        .service-card .service-icon {
-            width: 80px;
-            height: 80px;
-            font-size: 2.5rem;
-            background: transparent;
-            border: 3px solid #E89B9B;
-        }
-        
-        .service-card .service-icon::before {
-            width: 35px;
-            height: 35px;
-            border: 3px solid #E89B9B;
-        }
-
-        .service-card h4 {
-            color: #4A5C6A;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-
-        .service-card p {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: 280px 1fr 1fr 1fr 280px;
-            gap: 2rem;
-            margin-top: 3rem;
-            align-items: stretch;
-        }
-
-        .process-photo {
-            width: 280px;
-            height: 420px;
-            border-radius: 15px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #E89B9B, #D88A8A);
-        }
-
-        .process-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .step {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: 100%;
-        }
-
-        .step-number {
-            background: #E89B9B;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 0 auto 1.5rem;
-        }
-
-        .step h3 {
-            color: #4A5C6A;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .step p {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .credentials {
-            background: linear-gradient(135deg, #4A5C6A, #6B7C8A);
-            color: white;
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .credentials h2 {
-            color: #E89B9B;
-        }
-
-        .cred-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .cred-grid-health {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .cred-item {
-            padding: 2rem;
-        }
-
-        .cred-icon-text {
-            font-size: 1.8rem;
-            color: #E89B9B;
-            font-weight: 700;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 1.5rem;
-            background: rgba(232, 155, 155, 0.15);
-            border: 3px solid rgba(232, 155, 155, 0.4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            letter-spacing: 1px;
-        }
-
-        .cred-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #4A5C6A;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #E5E5E5;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #E89B9B;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .submit-btn {
-            background: #E89B9B;
-            color: white;
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #D88A8A;
-            transform: translateY(-2px);
-        }
-
-        .contact-info h3 {
-            color: #4A5C6A;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-icon {
-            color: #E89B9B;
-            font-size: 1.5rem;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(232, 155, 155, 0.1);
-            border-radius: 50%;
-            border: 2px solid rgba(232, 155, 155, 0.3);
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background: #F5F1ED;
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 4px solid #E89B9B;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 4rem;
-            color: #E89B9B;
-            opacity: 0.3;
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            line-height: 1.8;
-            color: #4A5C6A;
-            margin-bottom: 1.5rem;
-            padding-top: 1rem;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #4A5C6A;
-        }
-
-        .testimonial-location {
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Certificate Thumbnail in Credentials */
-        .cert-thumb {
-            width: 100%;
-            max-width: 180px;
-            height: auto;
-            margin-top: 1rem;
-            border-radius: 8px;
-            border: 2px solid rgba(232, 155, 155, 0.3);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background: #4A5C6A;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        /* FIXED LANGUAGE SWITCHER CSS */
-        .lang-en { display: block; }
-        .lang-de { display: none; }
-        
-        html[lang="de"] .lang-en { display: none; }
-        html[lang="de"] .lang-de { display: block; }
-
-        /* Inline elements need inline display */
-        a.lang-en, span.lang-en { display: inline; }
-        a.lang-de, span.lang-de { display: none; }
-        html[lang="de"] a.lang-en, html[lang="de"] span.lang-en { display: none; }
-        html[lang="de"] a.lang-de, html[lang="de"] span.lang-de { display: inline; }
-
-        @media (max-width: 768px) {
-            .hero {
-                background-position: center 35%;
-                padding: 4rem 1.5rem 3rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                height: 350px;
-            }
-            
-            .about-image img {
-                object-position: center 40%;
-                transform: scale(1.15);
-            }
-
-            .dimensions,
-            .cred-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cred-grid-health {
-                grid-template-columns: 1fr;
-            }
-
-            .pillars-grid,
-            .services-secondary {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-featured h3 {
-                text-align: center;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .process-photo {
-                width: 100%;
-                height: 250px;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .nav-right {
-                gap: 1rem;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-
-            .personal-story {
-                padding: 2rem 1.5rem;
-                margin: 2rem 1rem;
-            }
-            
-            .story-content {
-                font-size: 1.05rem;
-            }
-        }
-    </style>
+    <title>Pocka – Carry What Matters</title>
+    <meta name="description" content="Clevere Taschen und Babykleidung für moderne Familien.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="logo.png" alt="PYHN - Prioritize Your Health Now">
-            </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/logo-transparent.png" alt="Pocka Logo" style="height:80px; width:auto;">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" data-de="Über uns" data-en="About">Über uns</a></li>
+                <li><a href="#products" data-de="Produkte" data-en="Products">Produkte</a></li>
+                <li><a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+                <li><a href="#shop" class="btn btn-nav" data-de="Shop" data-en="Shop">Shop</a></li>
+            </ul>
             <div class="nav-right">
-                <ul>
-                    <li><a href="#home" class="lang-en">Home</a><a href="#home" class="lang-de">Start</a></li>
-                    <li><a href="#about" class="lang-en">About</a><a href="#about" class="lang-de">Über mich</a></li>
-                    <li><a href="#services" class="lang-en">Services</a><a href="#services" class="lang-de">Leistungen</a></li>
-                    <li><a href="#process" class="lang-en">Process</a><a href="#process" class="lang-de">Ablauf</a></li>
-                    <li><a href="#contact" class="lang-en">Contact</a><a href="#contact" class="lang-de">Kontakt</a></li>
-                </ul>
-                <div class="language-switcher">
-                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="switchLanguage('de')">DE</button>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="de">DE</button>
+                    <span>|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
                 </div>
+                <button class="nav-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="lang-en">
-            <h1>PYHN-Prioritize Your Health Now</h1>
-            <p>Medically 'fine' but not feeling your best? You deserve more than 'within normal range.' Let's move you from surviving to thriving - with energy, health, and vitality. Together, let's prioritize your health now.</p>
-            <a href="#contact" class="cta-button">Book free Health History Session</a>
         </div>
-        <div class="lang-de">
-            <h1>Prioritize Your Health Now</h1>
-            <p>Medizinisch eigentlich 'in Ordnung' aber du fühlst dich einfach nicht optimal? Du verdienst mehr als 'im Normbereich'. Lass uns das gemeinsam ändern - individuell ganz auf dich zugeschnitten, mit den Bausteinen, die für dich am relevantesten sind. Gemeinsam machen wir deine Gesundheit zur Priorität - jetzt und für die Zukunft!</p>
-            <p><strong>Online Coaching zu Zeiten, die zu deinem Leben passen</strong> – für Frühaufsteher, Schichtarbeiter und alle, die ihren Tag früh beginnen.</p>
-            <a href="#contact" class="cta-button">Gratis Health History Session buchen</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/logo-transparent.png" alt="Pocka - carry what matters" class="hero-logo" style="width:400px; height:auto;">
+            <p class="hero-subtitle" data-de="Clevere Taschen und Babykleidung für moderne Familien" data-en="Smart bags and baby clothing for modern families">Clevere Taschen und Babykleidung für moderne Familien</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary" data-de="Entdecken" data-en="Discover">Entdecken</a>
+                <a href="#shop" class="btn btn-secondary" data-de="Zum Shop" data-en="Shop Now">Zum Shop</a>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="lang-en">
-            <h2>About</h2>
-            <p class="section-intro">Strategic thinking meets holistic health expertise</p>
-
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
             <div class="about-content">
-                <div class="about-image">
-                    <img src="profile.jpg" alt="Iris Rummert – Online Health Coach für Frühaufsteher und Schichtarbeiter">
-                </div>
                 <div class="about-text">
-                    <h3>A Holistic Approach Rooted in Strategy</h3>
-                    <p>Your doctor says your results look okay and your lab values are 'within normal range.' But you sense something's not quite right - or simply not optimal. I help you bridge that gap from 'not sick' to truly thriving. My strategic approach optimizes your health proactively rather than reactively, helping you stay ahead of health issues before they become diagnoses.</p>
-                    <p>As a certified Integrative Nutrition Health Coach with additional qualifications as a Personal Trainer and Nutritionist, I address all four dimensions of health: <strong>Mental</strong> (clarity, focus & strength), <strong>Physical</strong> (movement, nutrition & vitality), <strong>Spiritual</strong> (purpose, values & inner balance), and <strong>Emotional</strong> (intelligence & resilience).</p>
-                    <p><strong>My Mission:</strong> To empower busy professionals and parents to proactively take control of their health, moving from "just okay" to truly thriving - with energy, clarity, and vitality.</p>
+                    <span class="section-tag" data-de="Unsere Geschichte" data-en="Our Story">Unsere Geschichte</span>
+                    <h2 data-de="Mit Liebe gemacht" data-en="Made with Love">Mit Liebe gemacht</h2>
+                    <p data-de="Hier kommt eure Geschichte hin – warum Pocka, was euch antreibt, was Pocka besonders macht." 
+                       data-en="Your story goes here – why Pocka, what drives you, what makes Pocka special.">
+                        Hier kommt eure Geschichte hin – warum Pocka, was euch antreibt, was Pocka besonders macht.
+                    </p>
                 </div>
-            </div>
-            
-            <div class="personal-story">
-                <div class="story-content">
-                    <p>After a stressful period focused solely on career and family, several health crises - with myself but mostly within my close circle - as well as a sudden move to another continent, prompted me to pause and listen to my inner needs. I realized I didn't want to just feel 'okay' or 'not that tired' anymore. I wanted to feel truly energized, well-rested, and in top shape - for myself and my family.</p>
-                    <p>Now, through Health Coaching, I want to help you do the same. You don't have to just function - you deserve to thrive. After years developing strategies in the pharmaceutical industry, I now help you create your own health strategy. Together, we'll proactively set your goals and steer your health journey before illness dictates the path.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="lang-de">
-            <h2>Über mich</h2>
-            <p class="section-intro">Strategisches Denken trifft ganzheitliche Gesundheitsexpertise</p>
-            
-            <div class="about-content">
                 <div class="about-image">
-                    <img src="profile.jpg" alt="Iris Rummert – Online Health Coach für Frühaufsteher und Schichtarbeiter">
-                </div>
-                <div class="about-text">
-                    <h3>Ein ganzheitlicher Ansatz mit strategischem Fundament</h3>
-                    <p>Dein Arzt sagt, deine Werte sehen eigentlich gut aus und deine Laborwerte sind "im Normbereich". Aber du spürst, dass etwas nicht ganz stimmt - oder einfach nicht optimal ist. Ich helfe dir, deinen eigenen Weg zu finden, diese Lücke zwischen "nicht krank" und "wirklich fit" zu überbrücken. Mein strategischer Ansatz optimiert deine Gesundheit proaktiv statt reaktiv und hilft dir, gesundheitlichen Problemen voraus zu sein, bevor sie zu Diagnosen werden.</p>
-                    <p>Als zertifizierter "Integrative Nutrition Health Coach" mit zusätzlichen Qualifikationen als Personal Trainer und Ernährungsberater adressiere ich alle vier Dimensionen der Gesundheit: <strong>Mental</strong> (Klarheit, Fokus & Stärke), <strong>Physisch</strong> (Bewegung, Ernährung & Vitalität), <strong>Spirituell</strong> (Sinn, Werte & Balance), und <strong>Emotional</strong> (Intelligenz & Resilienz). Zusammen fokussieren wir uns auf die Themen, die für dich relevant sind und wie du mit kleinen Schritten einen großen Mehrwert generieren kannst.</p>
-                    <p><strong>Meine Mission:</strong> Vielbeschäftigten Berufstätigen und Eltern zu helfen, proaktiv die Kontrolle über ihre Gesundheit zu übernehmen und sich von "ganz okay" zu wirklich erfüllt zu entwickeln - mit Energie, Klarheit und Vitalität.</p>
-                </div>
-            </div>
-            
-            <div class="personal-story">
-                <div class="story-content">
-                    <p>Nach einer stressigen Zeit, die sich ausschließlich um die Karriere parallel zur Familie mit 3 kleinen Kindern drehte, haben einige gesundheitliche Krisen - bei mir selbst, aber vor allem in meinem engsten Umfeld - sowie ein plötzlicher Umzug auf einen anderen Kontinent mich dazu gebracht, auf meine eigenen Bedürfnisse zu hören. Ich stellte fest, dass ich mich nicht nur 'ganz okay' fühlen wollte. Ich wollte mich wirklich energiegeladen, ausgeruht und topfit fühlen - für mich selbst und meine Familie.</p>
-                    <p>Mit meinem Health Coaching Programm möchte ich dir helfen, dasselbe zu tun. Nicht nur zu funktionieren, sondern dich rund um wohl und fit zu fühlen. Nach Jahren der Strategieentwicklung in der Pharmaindustrie helfe ich dir jetzt, deine Strategie zu einem fitteren, langen Leben zu entwickeln. Gemeinsam setzen wir proaktiv deine Ziele und steuern deine Reise, bevor Krankheiten den Weg diktieren.</p>
+                    <div class="placeholder-image">Bild</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="pillars">
-        <h2 class="lang-en">The 5 Pillars of Longevity</h2>
-        <h2 class="lang-de">Die 5 Säulen der Langlebigkeit</h2>
-        <p class="section-intro lang-en">A science-based approach to a long, healthy life</p>
-        <p class="section-intro lang-de">Ein wissenschaftlich fundierter Ansatz für ein langes, gesundes Leben</p>
-        <div class="pillars-grid">
-            <div class="pillar">
-                <div class="pillar-icon"></div>
-                <h3 class="lang-en">Movement</h3>
-                <h3 class="lang-de">Bewegung</h3>
-                <p class="lang-en">Customized fitness strategies for your lifestyle</p>
-                <p class="lang-de">Maßgeschneiderte Fitness-Strategien für deinen Lifestyle</p>
-            </div>
-            <div class="pillar">
-                <div class="pillar-icon"></div>
-                <h3 class="lang-en">Nutrition</h3>
-                <h3 class="lang-de">Ernährung</h3>
-                <p class="lang-en">Sustainable eating habits without diet stress</p>
-                <p class="lang-de">Nachhaltige Ernährungsgewohnheiten ohne Diät-Stress</p>
-            </div>
-            <div class="pillar">
-                <div class="pillar-icon"></div>
-                <h3 class="lang-en">Sleep</h3>
-                <h3 class="lang-de">Schlaf</h3>
-                <p class="lang-en">Optimizing your rest and recovery</p>
-                <p class="lang-de">Optimierung deiner Erholung und Regeneration</p>
-            </div>
-            <div class="pillar">
-                <div class="pillar-icon"></div>
-                <h3 class="lang-en">Stress Management</h3>
-                <h3 class="lang-de">Stressmanagement</h3>
-                <p class="lang-en">Practical techniques for more calm</p>
-                <p class="lang-de">Praktische Techniken für mehr Gelassenheit</p>
-            </div>
-            <div class="pillar">
-                <div class="pillar-icon"></div>
-                <h3 class="lang-en">Fulfillment</h3>
-                <h3 class="lang-de">Zufriedenheit</h3>
-                <p class="lang-en">Finding purpose and contentment in life</p>
-                <p class="lang-de">Sinn und Zufriedenheit im Leben finden</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="services">
-        <h2 class="lang-en">My Services</h2>
-        <h2 class="lang-de">Meine Leistungen</h2>
-        <p class="section-intro lang-en">Personalized coaching that adapts to your life</p>
-        <p class="section-intro lang-de">Individuelles Coaching, das sich deinem Leben anpasst</p>
-        
-        <div class="service-featured">
-            <div class="service-icon"></div>
-            <div class="lang-en">
-                <h3>1:1 Holistic Health Coaching</h3>
-                <p>My signature offering: Individual coaching addressing all four dimensions of your health - mental, physical, spiritual, and emotional. Together we set realistic, meaningful goals and I create a supportive space for your personal transformation. This is where real, lasting change happens.</p>
-                <a href="#contact" class="cta-button">Start Your Journey</a>
-            </div>
-            <div class="lang-de">
-                <h3>1:1 Ganzheitliches Gesundheitscoaching</h3>
-                <p>Mein Hauptangebot: Individuelles Coaching für alle vier Dimensionen deiner Gesundheit - mental, physisch, spirituell und emotional. Gemeinsam setzen wir realistische, bedeutungsvolle Ziele und ich schaffe einen unterstützenden Raum für deine persönliche Transformation. Hier geschieht echte, nachhaltige Veränderung.</p>
-                <a href="#contact" class="cta-button">Starte deine Reise</a>
-            </div>
-        </div>
-
-        <div class="additional-services">
-            <h3 class="lang-en">Additional Specialized Services</h3>
-            <h3 class="lang-de">Zusätzliche Spezial-Angebote</h3>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <span class="section-tag" data-de="Kollektion" data-en="Collection">Kollektion</span>
+            <h2 data-de="Unsere Produkte" data-en="Our Products">Unsere Produkte</h2>
             
-            <div class="services-secondary">
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h4 class="lang-en">Nutrition Planning</h4>
-                    <h4 class="lang-de">Ernährungsplanung</h4>
-                    <p class="lang-en">Customized nutrition plans based on science and your preferences</p>
-                    <p class="lang-de">Maßgeschneiderte Ernährungspläne basierend auf Wissenschaft und deinen Vorlieben</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image placeholder-image">Bild</div>
+                    <h3 data-de="Taschen" data-en="Bags">Taschen</h3>
+                    <p data-de="Praktisch, stylisch und durchdacht – für den Alltag mit Kind." data-en="Practical, stylish and thoughtfully designed – for everyday life with kids.">Praktisch, stylisch und durchdacht – für den Alltag mit Kind.</p>
+                    <a href="#shop" class="btn btn-outline" data-de="Entdecken" data-en="Discover">Entdecken</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h4 class="lang-en">Fitness Coaching</h4>
-                    <h4 class="lang-de">Fitness-Coaching</h4>
-                    <p class="lang-en">Personalized training plans that fit your lifestyle</p>
-                    <p class="lang-de">Personalisierte Trainingspläne für deinen Alltag</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h4 class="lang-en">Fasting Guidance</h4>
-                    <h4 class="lang-de">Fasten-Begleitung</h4>
-                    <p class="lang-en">Professional guidance for safe, effective fasting</p>
-                    <p class="lang-de">Professionelle Begleitung für sicheres, effektives Fasten</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h4 class="lang-en">Keynote Speeches</h4>
-                    <h4 class="lang-de">Vorträge & Keynotes</h4>
-                    <p class="lang-en">Inspiring talks on health and longevity</p>
-                    <p class="lang-de">Inspirierende Vorträge über Gesundheit und Langlebigkeit</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h4 class="lang-en">AI Longevity Agent</h4>
-                    <h4 class="lang-de">KI Langlebigkeits-Agent</h4>
-                    <p class="lang-en">Personalized AI assistant for your longevity journey - available 24/7</p>
-                    <p class="lang-de">Personalisierter KI-Assistent für deine Langlebigkeitsreise - 24/7 verfügbar</p>
+                
+                <div class="product-card">
+                    <div class="product-image placeholder-image">Bild</div>
+                    <h3 data-de="Babykleidung" data-en="Baby Clothing">Babykleidung</h3>
+                    <p data-de="Weich, bequem und nachhaltig – für die Kleinsten." data-en="Soft, comfortable and sustainable – for the little ones.">Weich, bequem und nachhaltig – für die Kleinsten.</p>
+                    <a href="#shop" class="btn btn-outline" data-de="Entdecken" data-en="Discover">Entdecken</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="process">
-        <h2 class="lang-en">How We Work Together</h2>
-        <h2 class="lang-de">So arbeiten wir zusammen</h2>
-        <p class="section-intro lang-en">A structured process for sustainable change</p>
-        <p class="section-intro lang-de">Ein strukturierter Prozess für nachhaltige Veränderung</p>
-        
-        <div class="process-steps">
-            <div class="process-photo">
-                <img src="process-left.jpg" alt="Online Gesundheitscoaching – ganzheitliche Beratung für Berufstätige">
-            </div>
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3 class="lang-en">Health History Session</h3>
-                <h3 class="lang-de">Health History Session</h3>
-                <p class="lang-en">A comprehensive 45-minute session where we explore your complete health background, current challenges, and aspirations. This forms the foundation for our coaching journey.</p>
-                <p class="lang-de">Eine umfassende 45-minütige Kennenlern-Session, in der wir deine vollständige Gesundheitsgeschichte, aktuelle Herausforderungen und Ziele erkunden. Dies bildet die Grundlage für unser Coaching.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3 class="lang-en">Set Goals</h3>
-                <h3 class="lang-de">Ziele setzen</h3>
-                <p class="lang-en">Based on your health history, we define clear, achievable goals tailored specifically to you and your unique situation.</p>
-                <p class="lang-de">Basierend auf deiner Gesundheitsgeschichte definieren wir klare, erreichbare Ziele - individuell auf dich und deine Situation zugeschnitten.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3 class="lang-en">Coaching & Growth</h3>
-                <h3 class="lang-de">Coaching & Wachstum</h3>
-                <p class="lang-en">Regular coaching sessions building on your health history insights, where I support and guide you toward lasting transformation.</p>
-                <p class="lang-de">Regelmäßige Coaching-Sessions basierend auf deinen Health History Erkenntnissen, in denen ich dich zu nachhaltiger Transformation begleite.</p>
-            </div>
-            <div class="process-photo">
-                <img src="process-right.jpg" alt="Health Coaching Prozess – von Surviving zu Thriving">
-            </div>
+    <!-- Shop CTA Section -->
+    <section id="shop" class="shop-cta">
+        <div class="container">
+            <h2 data-de="Bereit zum Shoppen?" data-en="Ready to Shop?">Bereit zum Shoppen?</h2>
+            <p data-de="Entdecke unsere Kollektion im Online-Shop" data-en="Discover our collection in the online shop">Entdecke unsere Kollektion im Online-Shop</p>
+            <a href="#" class="btn btn-primary btn-large" data-de="Zum Shop →" data-en="Visit Shop →">Zum Shop →</a>
+            <p class="shop-note" data-de="(Bald verfügbar)" data-en="(Coming soon)">(Bald verfügbar)</p>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2 class="lang-en">What Clients Say</h2>
-        <h2 class="lang-de">Was Klienten sagen</h2>
-        <p class="section-intro lang-en">Real transformations, real people</p>
-        <p class="section-intro lang-de">Echte Transformationen, echte Menschen</p>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text lang-en">"The health coaching program helped me understand the importance of proper nutrition and strength training — not just for muscle gain, but mainly for overall fitness. Over time, my long-standing joint and back pain significantly improved."</p>
-                <p class="testimonial-text lang-de">"Das Gesundheitscoaching half mir, die Bedeutung von richtiger Ernährung und Krafttraining zu verstehen — nicht nur für Muskelaufbau, sondern vor allem für die allgemeine Fitness. Mit der Zeit verbesserten sich meine langjährigen Gelenk- und Rückenschmerzen deutlich."</p>
-                <p class="testimonial-author">Andi</p>
-                <p class="testimonial-location lang-en">Germany</p>
-                <p class="testimonial-location lang-de">Deutschland</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text lang-en">"Through the program, I was able to identify poor sleep and stress management as the root causes of not feeling at my best — emotionally, mentally, and physically. With guidance, I gradually implemented changes that helped me relax and sleep much better. I now feel far more active and have so much more energy."</p>
-                <p class="testimonial-text lang-de">"Durch das Programm konnte ich schlechten Schlaf und Stressmanagement als Ursachen dafür identifizieren, dass ich mich nicht optimal fühlte — emotional, mental und körperlich. Mit Anleitung setzte ich schrittweise Veränderungen um, die mir halfen, besser zu entspannen und zu schlafen. Ich fühle mich jetzt viel aktiver und habe so viel mehr Energie."</p>
-                <p class="testimonial-author">Chelsea</p>
-                <p class="testimonial-location">Chicago</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text lang-en">"Through the health coaching program, I realized that unresolved emotional issues were holding me back from making meaningful and sustainable changes. Since then, my transformation has begun. Integrating intermittent fasting into my daily routine, for example, helped me maintain my weight goals while still ensuring proper nutrient intake."</p>
-                <p class="testimonial-text lang-de">"Durch das Gesundheitscoaching erkannte ich, dass ungelöste emotionale Themen mich davon abhielten, bedeutsame und nachhaltige Veränderungen zu machen. Seitdem hat meine Transformation begonnen. Intermittierendes Fasten in meinen Alltag zu integrieren half mir zum Beispiel, meine Gewichtsziele zu halten und gleichzeitig eine ausreichende Nährstoffzufuhr sicherzustellen."</p>
-                <p class="testimonial-author">Linh</p>
-                <p class="testimonial-location">Saigon</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text lang-en">"She truly supported me as an accountability partner. Even though it required overcoming long-held beliefs, I was able to rethink my eating and snacking habits and improve my breakfast routine. And this was just the beginning."</p>
-                <p class="testimonial-text lang-de">"Sie hat mich wirklich als Accountability-Partner unterstützt. Obwohl es erforderte, langjährige Überzeugungen zu überwinden, konnte ich meine Ess- und Snack-Gewohnheiten überdenken und meine Frühstücksroutine verbessern. Und das war erst der Anfang."</p>
-                <p class="testimonial-author">Inge</p>
-                <p class="testimonial-location lang-en">Germany</p>
-                <p class="testimonial-location lang-de">Deutschland</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="credentials">
-        <h2 class="lang-en">Professional Background</h2>
-        <h2 class="lang-de">Professioneller Hintergrund</h2>
-        <p class="section-intro lang-en" style="color: white;">Strategic thinking meets holistic health expertise</p>
-        <p class="section-intro lang-de" style="color: white;">Strategisches Denken trifft ganzheitliche Gesundheitsexpertise</p>
-        
-        <div class="cred-grid-health">
-            <div class="cred-item">
-                <div class="cred-icon-text">IIN</div>
-                <h3 class="lang-en">Integrative Nutrition Health Coach</h3>
-                <h3 class="lang-de">Integrative Nutrition Health Coach</h3>
-                <p class="lang-en">Institute of Integrative Nutrition</p>
-                <p class="lang-de">Institute of Integrative Nutrition</p>
-                <img src="cert-iin.png" alt="IIN Certificate" class="cert-thumb">
-            </div>
-            <div class="cred-item">
-                <div class="cred-icon-text">PT</div>
-                <h3>Personal Trainer</h3>
-                <p class="lang-en">Academy of Sports</p>
-                <p class="lang-de">Academy of Sports</p>
-                <img src="cert-fitness.png" alt="Fitness Certificate" class="cert-thumb">
-            </div>
-            <div class="cred-item">
-                <div class="cred-icon-text">EN</div>
-                <h3 class="lang-en">Nutritionist</h3>
-                <h3 class="lang-de">Ernährungsberater</h3>
-                <p class="lang-en">Academy of Sports</p>
-                <p class="lang-de">Academy of Sports</p>
-                <img src="cert-nutrition.png" alt="Nutrition Certificate" class="cert-thumb">
-            </div>
-            <div class="cred-item">
-                <div class="cred-icon-text">CHC</div>
-                <h3 class="lang-en">Certified Health Coach</h3>
-                <h3 class="lang-de">Certified Health Coach</h3>
-                <p class="lang-en">Academy of Sports</p>
-                <p class="lang-de">Academy of Sports</p>
-                <img src="cert-healthcoach.png" alt="Health Coach Certificate" class="cert-thumb">
-            </div>
-        </div>
-
-        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 2px solid rgba(232, 155, 155, 0.3);">
-            <h3 style="color: #E89B9B; font-size: 1.8rem; margin-bottom: 2rem;" class="lang-en">Business & Strategy Excellence</h3>
-            <h3 style="color: #E89B9B; font-size: 1.8rem; margin-bottom: 2rem;" class="lang-de">Business & Strategie Exzellenz</h3>
-            <div class="cred-grid">
-                <div class="cred-item">
-                    <div class="cred-icon-text">B.Sc.</div>
-                    <h3>Bachelor of Business Administration</h3>
-                    <p class="lang-en">Foundation in strategic thinking and corporate development</p>
-                    <p class="lang-de">Fundament in strategischem Denken und Corporate Development</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">University of Cologne<br>University of British Columbia</p>
-                </div>
-                <div class="cred-item">
-                    <div class="cred-icon-text">M.Sc.</div>
-                    <h3 class="lang-en">Master in Business Administration<br>& Master in International Management</h3>
-                    <h3 class="lang-de">Master in Business Administration<br>& Master in International Management</h3>
-                    <p class="lang-en">Dual master's degrees in strategic expertise</p>
-                    <p class="lang-de">Zwei Master-Abschlüsse in strategischer Expertise</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">University of Cologne<br>Bocconi University</p>
-                </div>
-                <div class="cred-item">
-                    <div class="cred-icon-text">360°</div>
-                    <h3 class="lang-en">Holistic Strategy Development</h3>
-                    <h3 class="lang-de">Ganzheitliche Strategieentwicklung</h3>
-                    <p class="lang-en">Years of experience building comprehensive strategies</p>
-                    <p class="lang-de">Langjährige Erfahrung im Aufbau ganzheitlicher Strategien</p>
-                </div>
-            </div>
-            <p style="max-width: 800px; margin: 3rem auto 0; font-size: 1.15rem; line-height: 1.8;" class="lang-en">
-                My unique combination of business strategy expertise and health coaching allows me to create comprehensive, sustainable health plans. I approach your wellbeing the way successful businesses approach growth: with clear goals, strategic planning, and measurable results.
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <span class="section-tag" data-de="Kontakt" data-en="Contact">Kontakt</span>
+            <h2 data-de="Schreib uns" data-en="Get in Touch">Schreib uns</h2>
+            <p class="contact-intro" data-de="Fragen, Anregungen oder einfach Hallo sagen?" data-en="Questions, suggestions, or just want to say hello?">Fragen, Anregungen oder einfach Hallo sagen?</p>
+            <p style="text-align:center; margin-bottom: 1.5rem;">
+                <a href="mailto:info@pocka.de" style="color: #7E746A;">info@pocka.de</a>
             </p>
-            <p style="max-width: 800px; margin: 3rem auto 0; font-size: 1.15rem; line-height: 1.8;" class="lang-de">
-                Meine einzigartige Kombination aus Business-Strategie-Expertise und Health Coaching ermöglicht mir, umfassende, nachhaltige Gesundheitspläne zu erstellen. Ich gehe dein Wohlbefinden an wie erfolgreiche Unternehmen ihr Wachstum: mit klaren Zielen, strategischer Planung und messbaren Ergebnissen.
-            </p>
-        </div>
-    </div>
-
-<section id="contact">
-        <h2 class="lang-en">Ready for Change?</h2>
-        <h2 class="lang-de">Bereit für Veränderung?</h2>
-        <p class="section-intro lang-en">PYHN - Let's prioritize your health now</p>
-        <p class="section-intro lang-de">Lass uns gemeinsam deine Gesundheit zur Priorität machen</p>
-        
-        <div class="contact-content">
-            <div class="contact-form">
-                <form action="https://formspree.io/f/xdkqdzqp" method="POST">
-                    <div class="form-group">
-                        <label for="name" class="lang-en">Name</label>
-                        <label for="name" class="lang-de">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="lang-en">Email</label>
-                        <label for="email" class="lang-de">E-Mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="lang-en">Phone (optional)</label>
-                        <label for="phone" class="lang-de">Telefon (optional)</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="lang-en">Your Message</label>
-                        <label for="message" class="lang-de">Deine Nachricht</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn lang-en">Send Message</button>
-                    <button type="submit" class="submit-btn lang-de">Nachricht senden</button>
-                </form>
-            </div>
             
-            <div class="contact-info">
-                <h3 class="lang-en">Let's Start Your Journey</h3>
-                <h3 class="lang-de">Starte deine Reise</h3>
-                <p class="lang-en">Book a complimentary Health History Session - a comprehensive 45-minute consultation where we dive deep into your health background.</p>
-                <p class="lang-de">Buche eine unverbindliche, gratis Health History Session - ein umfassendes 45-minütiges Kennenlernen, in der wir tief in deine Gesundheitsgeschichte eintauchen.</p>
-                <p class="lang-en">In this session:</p>
-                <p class="lang-de">In dieser Session:</p>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 1rem;" class="lang-en">✓ We explore your complete health history</li>
-                    <li style="margin-bottom: 1rem;" class="lang-de">✓ Erforschen wir deine komplette Gesundheitsgeschichte</li>
-                    <li style="margin-bottom: 1rem;" class="lang-en">✓ Identify patterns and root causes</li>
-                    <li style="margin-bottom: 1rem;" class="lang-de">✓ Identifizieren Muster und Ursachen</li>
-                    <li style="margin-bottom: 1rem;" class="lang-en">✓ Create a foundation for your coaching journey</li>
-                    <li style="margin-bottom: 1rem;" class="lang-de">✓ Schaffen eine Grundlage für dein Coaching</li>
-                </ul>
-                <div class="contact-detail">
-                    <span class="contact-icon">📧</span>
-                    <p><a href="mailto:info@yourhealthylonglife.com" style="color: inherit;">info@yourhealthylonglife.com</a></p>
+            <form class="contact-form" action="https://formspree.io/f/xzdazqvl" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" required>
+                    <label data-de="Name" data-en="Name">Name</label>
                 </div>
-            </div>
+                <div class="form-row">
+                    <input type="email" name="email" required>
+                    <label data-de="E-Mail" data-en="Email">E-Mail</label>
+                </div>
+                <div class="form-row">
+                    <textarea name="message" rows="4" required></textarea>
+                    <label data-de="Nachricht" data-en="Message">Nachricht</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-de="Absenden" data-en="Send">Absenden</button>
+            </form>
         </div>
     </section>
 
-    <footer>
-        <p class="lang-en">&copy; 2026 PYHN - Prioritize Your Health Now | Holistic Health Coaching</p>
-        <p class="lang-de">&copy; 2026 PYHN - Prioritize Your Health Now | Ganzheitliches Gesundheitscoaching</p>
-        <p style="margin-top: 1rem;"><a href="https://instagram.com/pyhn_now" target="_blank" style="color: #E89B9B;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 5px;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg> @pyhn_now</a></p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-transparent.png" alt="Pocka Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#" data-de="Impressum" data-en="Imprint">Impressum</a>
+                    <a href="#" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
+                    <a href="#" data-de="AGB" data-en="Terms">AGB</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Pocka. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        function switchLanguage(lang) {
-            document.documentElement.setAttribute('lang', lang);
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            localStorage.setItem('preferredLanguage', lang);
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-            document.documentElement.setAttribute('lang', savedLang);
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.textContent.toLowerCase() === savedLang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
